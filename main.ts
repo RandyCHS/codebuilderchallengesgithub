@@ -43,7 +43,7 @@ player.onChat("Challenge9", function () {
     xPos = 230
     yPos = 4
     zPos = -15
-    agent.teleport(world(xPos, yPos, zPos), NORTH)
+    agent.teleport(world(xPos, yPos, zPos), EAST)
 })
 player.onChat("Challenge2", function () {
     xPos = 208
