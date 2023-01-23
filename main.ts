@@ -161,6 +161,12 @@ player.onChat("compass", function () {
 player.onChat("tpWdPsW", function (xPos, yPos, zPos) {
     agent.teleport(world(xPos, yPos, zPos), WEST)
 })
+player.onChat("Challenge8", function () {
+    xPos = 218
+    yPos = 4
+    zPos = -19
+    agent.teleport(world(xPos, yPos, zPos), NORTH)
+})
 player.onChat("Challenge1", function () {
     xPos = 229
     yPos = 4
