@@ -61,6 +61,46 @@ player.onChat("Challenge4", function () {
     yPos = 4
     zPos = 9
     agent.teleport(world(xPos, yPos, zPos), WEST)
+    numUp = 1
+    agent.move(UP, numUp)
+    numFwd = 6
+    agent.move(FORWARD, numFwd)
+    agent.turn(LEFT_TURN)
+    numFwd = 1
+    agent.move(FORWARD, numFwd)
+    numUp = 2
+    agent.move(UP, numUp)
+    numFwd = 2
+    agent.move(FORWARD, numFwd)
+    numDn = 2
+    agent.move(DOWN, numDn)
+    numFwd = 2
+    agent.move(FORWARD, numFwd)
+    agent.turn(RIGHT_TURN)
+    numFwd = 4
+    agent.move(FORWARD, numFwd)
+    numUp = 1
+    agent.move(UP, numUp)
+    numFwd = 3
+    agent.move(FORWARD, numFwd)
+    agent.turn(RIGHT_TURN)
+    numFwd = 4
+    agent.move(FORWARD, numFwd)
+    agent.turn(LEFT_TURN)
+    numFwd = 1
+    agent.move(FORWARD, numFwd)
+    agent.turn(RIGHT_TURN)
+    numFwd = 1
+    agent.move(FORWARD, numFwd)
+    numDn = 2
+    agent.move(DOWN, numDn)
+    numBk = 2
+    agent.move(BACK, numBk)
+    agent.turn(LEFT_TURN)
+    numFwd = 5
+    agent.move(FORWARD, numFwd)
+    numDn = 1
+    agent.move(DOWN, numDn)
 })
 player.onChat("compass", function () {
     p = player.position()
@@ -206,6 +246,7 @@ let up: Position = null
 let west: Position = null
 let east: Position = null
 let p: Position = null
+let numBk = 0
 let numDn = 0
 let numUp = 0
 let numFwd = 0
