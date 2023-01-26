@@ -244,6 +244,20 @@ player.onChat("Challenge8", function () {
     zPos = -19
     agent.teleport(world(xPos, yPos, zPos), NORTH)
 })
+player.onChat("Challenge5C", function () {
+    xPos = 145
+    yPos = 4
+    zPos = -23
+    agent.teleport(world(xPos, yPos, zPos), NORTH)
+    sltNum = 2
+    agent.setSlot(sltNum)
+    numFwd = 10
+    for (let index = 0; index < numFwd; index++) {
+        agent.destroy(FORWARD)
+        agent.collectAll()
+        agent.move(FORWARD, 1)
+    }
+})
 player.onChat("challengeNxt", function () {
     agent.transfer(6, 2, 3)
 })
