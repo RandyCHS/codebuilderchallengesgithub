@@ -1,6 +1,20 @@
 player.onChat("inspectDir", function (direction) {
     player.say(agent.inspect(AgentInspection.Block, direction))
 })
+player.onChat("Challenge5B", function () {
+    xPos = 145
+    yPos = 4
+    zPos = -23
+    agent.teleport(world(xPos, yPos, zPos), NORTH)
+    sltNum = 2
+    agent.setSlot(sltNum)
+    numFwd = 10
+    for (let index = 0; index < numFwd; index++) {
+        agent.destroy(FORWARD)
+        agent.collectAll()
+        agent.move(FORWARD, 1)
+    }
+})
 player.onChat("Challenge3", function () {
     xPos = 192
     yPos = 4
@@ -264,10 +278,10 @@ let west: Position = null
 let east: Position = null
 let p: Position = null
 let numBk = 0
-let sltNum = 0
 let numDn = 0
 let numUp = 0
 let numFwd = 0
+let sltNum = 0
 let zPos = 0
 let yPos = 0
 let xPos = 0
