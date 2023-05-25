@@ -270,10 +270,20 @@ player.onChat("Challenge1", function () {
     agent.move(FORWARD, numFwd)
 })
 player.onChat("Challenge6", function () {
-    xPos = 162
+    xPos = 168
     yPos = 4
-    zPos = -24
+    zPos = -26
     agent.teleport(world(xPos, yPos, zPos), NORTH)
+    agent.setItem(CARROTS, 64, 1)
+    for (let index = 0; index < 3; index++) {
+        for (let index = 0; index < 10; index++) {
+            agent.move(FORWARD, 1)
+            agent.till(FORWARD)
+            agent.place(FORWARD)
+        }
+        agent.move(LEFT, 2)
+        agent.move(BACK, 10)
+    }
 })
 player.onChat("fwdNum", function (numFwd) {
     agent.move(FORWARD, numFwd)
